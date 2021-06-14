@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name             = 'performance_logger',
-    version          = '1.0.2',
+    version          = '1.0.3',
     description      = 'check performance of the func using decorator',
     author           = 'Sean Kim',
     author_email     = 'ddhyun93@gmail.com',

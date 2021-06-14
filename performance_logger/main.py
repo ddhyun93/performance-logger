@@ -15,15 +15,15 @@ def perf_logger(func, time_format):
         if time_format == "datetime":
             log = PerformanceLoggerDateTime()
             log.reset_timer()
-            func(*args, **kwargs)
+            fun = func(*args, **kwargs)
             name = func.__name__
             log.log(f"Run Func \'{name}\'", "time logged")
-            return
+            return fun
         elif time_format == "ns":
             log = PerformanceLoggerNanoSec()
             log.reset_timer()
-            func(*args, **kwargs)
+            fun = func(*args, **kwargs)
             name = func.__name__
             log.log(f"Run Func \'{name}\'", "time logged")
-            return
+            return fun
     return decorated_func
